@@ -25,18 +25,3 @@ ENV PORT=8085
 
 # Comando para iniciar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
-```
-
-### **1.2 - .dockerignore**
-
-Crie o arquivo `.dockerignore` na **raiz do projeto**:
-```
-target/
-.git/
-.idea/
-*.iml
-.mvn/
-mvnw
-mvnw.cmd
-.gitignore
-README.md
