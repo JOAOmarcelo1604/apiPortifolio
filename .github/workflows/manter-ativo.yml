@@ -1,0 +1,15 @@
+name: Manter API Acordada
+
+on:
+  schedule:
+    # Roda a cada 14 minutos para evitar que o Render durma (limite de 15min)
+    - cron: '*/14 * * * *'
+  workflow_dispatch: # Permite rodar manualmente clicando num botão se quiser testar
+
+jobs:
+  ping-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Acordar o Render
+        run: |
+          curl -I https://apiportifolio-ccat.onrender.com/ativado
